@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body {
+  background: url("../asset/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.content {
+  display: flex;
+  background: #000;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  border-radius: 3rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+  transition: all 0.3s ease;
+}
+
+.content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.navigation-list {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navigation-list ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.navigation-list ul li.action {
+  color: white;
+}
+
+.navigation-list ul li {
+  color: #5a5858;
+  cursor: pointer;
+}
+
+.navigation-list ul li:hover {
+  color: white;
+}
+
+.login {
+  padding-inline: 1.5rem;
+  padding-block: 0.5rem;
+  border-radius: 3rem;
+  border: 0.1rem solid #e2d7d1;
+  background: #e2d7d1;
+  color: #222;
+  font-weight: 500;
+  box-shadow: 0 0 1.5rem #e2d7d1;
+  cursor: pointer;
+  display: none;
+}
+
+.bar {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.bar img {
+  width: 2rem;
+}
+
+.bar .navigation-list-mobile {
+  color: white;
+  position: absolute;
+  right: -20rem;
+  bottom: -12.5rem;
+  opacity: 0;
+  background: #000;
+  padding: 1rem;
+  width: 13rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+  transition: all 0.3s ease;
+}
+
+.bar .navigation-list-mobile.active {
+  right: 0;
+  opacity: 1;
+}
+
+.bar .navigation-list-mobile li.action {
+  color: white;
+}
+
+.bar .navigation-list-mobile li {
+  color: #5a5858;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+}
+
+.bar .navigation-list-mobile li:hover {
+  color: white;
+}
+
+@media (min-width: 1024) {
+  .content {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    width: 50%;
+  }
+  .login {
+    display: block;
+  }
+  .navigation-list {
+    display: flex;
+  }
+  .bar {
+    display: none;
+  }
+}
