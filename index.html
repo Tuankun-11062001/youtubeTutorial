@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        background: url("./asset/bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+      }
+      .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        background: white;
+        border-radius: 2rem;
+        padding-inline: 6rem;
+        padding-block: 2rem;
+        gap: 2rem;
+        position: relative;
+        box-shadow: 0 0 2rem rgba(255, 255, 255, 1);
+      }
+
+      .content h1 {
+        font-size: 3rem;
+        color: #222;
+        font-weight: 550;
+      }
+
+      .content img {
+        width: 20rem;
+      }
+
+      .content p {
+        text-align: center;
+        color: gray;
+      }
+
+      .social {
+        position: absolute;
+        bottom: 5rem;
+        right: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .social img {
+        width: 2rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="card">
+      <div class="content">
+        <h1>Hi!</h1>
+        <img src="asset/logo.png" />
+        <p>
+          I am June i am developer and content creator. Hope guy support me!!
+          Have a nice day <3.
+        </p>
+        <div class="social">
+          <a href="https://facebook.com" target="_blank">
+            <img src="/asset/face.svg" />
+          </a>
+          <a href="https://tiktok.com" target="_blank">
+            <img src="/asset/tiktok.svg" />
+          </a>
+          <a href="https://youtube.com" target="_blank">
+            <img src="/asset/youtube.svg" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
