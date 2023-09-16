@@ -112,6 +112,7 @@ ul {
   gap: 1rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 1);
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 .bar .navigation-list-mobile.active {
