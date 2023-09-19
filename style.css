@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: url("./asset/bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+img {
+  pointer-events: none;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.todo {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(30px);
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem rgba(255, 255, 255, 0.5);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo_head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  padding-bottom: unset;
+}
+
+.todo_head input {
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  border-radius: 1rem;
+  border: 0.1rem solid rgba(255, 255, 255, 1);
+  font-size: 1.2rem;
+  outline: none;
+  color: #5c5c5c;
+  box-shadow: 0 0 1.5rem rgb(255, 255, 255);
+}
+
+.todo_head input.error {
+  border: 0.1rem solid rgb(253, 50, 50);
+}
+
+.todo_head button {
+  width: max-content;
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  background: transparent;
+  border-radius: 1rem;
+  border: 0.1rem solid white;
+  color: white;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.todo_head button:hover {
+  background: white;
+  color: #5c5c5c;
+}
+
+.todo_submit {
+  display: none;
+}
+.todo_submit.action {
+  display: block;
+}
+.todo_edit {
+  display: none;
+}
+.todo_edit.action {
+  display: block;
+}
+
+.todo_head .todo_err {
+  color: rgb(253, 50, 50);
+}
+
+.todo_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 20rem;
+  overflow: auto;
+  padding: 2rem;
+}
+
+.todo_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  background: white;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 1rem;
+  color: #5c5c5c;
+  box-shadow: 0 0 2rem white;
+  transition: all 0.5s ease;
+  position: relative;
+  border: 0.1rem solid transparent;
+}
+
+.todo_item.fall {
+  transform: translate(-5rem, 5rem);
+  opacity: 0;
+  z-index: 3;
+}
+
+.todo_item:hover {
+  border: 0.1rem solid gray;
+  box-shadow: 0 0 2rem rgb(214, 214, 214);
+}
+
+.todo_item p {
+  flex: 1;
+  padding-block: 0.5rem;
+  cursor: pointer;
+}
+
+.todo_item.success:hover {
+  box-shadow: 0 0 2rem unset;
+  background: white;
+}
+
+.todo_item.success:hover p {
+  color: #5c5c5c;
+}
+
+.todo_item.success.fall {
+  transform: translate(-5rem, 5rem);
+  opacity: 0;
+  z-index: 3;
+}
+
+.todo_item.success p {
+  pointer-events: none;
+  text-decoration: line-through;
+}
+
+.todo_item.success {
+  opacity: 0.5;
+  box-shadow: unset;
+  position: relative;
+}
+
+.todo_item.success button:first-child {
+  display: none;
+}
+
+.todo_item.success button:last-child {
+  cursor: pointer !important;
+}
+
+.todo_actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.todo_item button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.todo_item button img {
+  width: 2rem;
+}
+
+@media (min-width: 768px) {
+  .todo {
+    width: 50%;
+  }
+}
