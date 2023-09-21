@@ -1,0 +1,42 @@
+@mixin dynamicAlign(
+  $justify: $app_flex_justify,
+  $align: $app_flex_align,
+  $direction: $app_flex_direction,
+  $gap: $app_flex_gap,
+  $wrap: $app_flex_wrap
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+@mixin backgroundTheme($themeURL) {
+  background: url($themeURL);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin button(
+  $pad_inline: $app_padding,
+  $pad_block: $app_padding,
+  $margin: $app_margin,
+  $border_radius: $app_radius,
+  $border_color: $app_border_color,
+  $background: $app_background,
+  $font_size: $app_font_size,
+  $box_shadow: $app_box_shadow,
+  $color: $app_text_color
+) {
+  padding-inline: $pad_inline;
+  padding-block: $pad_block;
+  border-radius: $border_radius;
+  border: 0.1rem solid $border_color;
+  background: $background;
+  font-size: $font_size;
+  box-shadow: $box_shadow;
+  color: $color;
+}

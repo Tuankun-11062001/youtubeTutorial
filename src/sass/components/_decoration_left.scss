@@ -1,0 +1,54 @@
+.decoration_left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  @include dynamicAlign($direction: column, $justify: space-between);
+  padding-block: 2rem;
+}
+
+.decoration_item {
+  span {
+    width: $decoration_left_width - 3rem;
+    height: $decoration_left_height - 0.5rem;
+    background: $app_background;
+    margin-left: -1rem;
+    display: block;
+    &:last-child {
+      margin-top: $app_margin;
+    }
+  }
+}
+
+@include md {
+  .decoration_item {
+    span {
+      width: $decoration_left_width;
+      height: $decoration_left_height;
+      margin-left: -4rem;
+    }
+  }
+}
+
+.decoration_left.theme1 {
+  .decoration_item {
+    span {
+      background: $theme1_decoration;
+    }
+  }
+}
+
+.decoration_left.theme2 {
+  .decoration_item {
+    span {
+      background: $theme2_decoration;
+    }
+  }
+}
+
+.decoration_left.theme3 {
+  .decoration_item {
+    span {
+      background: $theme3_decoration;
+    }
+  }
+}

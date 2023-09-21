@@ -1,0 +1,47 @@
+$app_margin: 1rem;
+$app_padding: 1rem;
+$app_radius: 3rem;
+$app_border_color: transparent;
+$app_background: transparent;
+$app_font_size: 1.6rem;
+$app_box_shadow: 4px 4px 1.5rem rgba(0, 0, 0, 0.2);
+$app_text_color: #000;
+$app_btn_background: #fff;
+$app_btn-text: #ff5f5f;
+$app_nav_background: #fff;
+$app_nav_text: #424141;
+$app_nav_text_active: #ff5f5f;
+
+// canvas decoration
+
+$decoration_left_width: 6rem;
+$decoration_left_height: 1rem;
+
+// theme
+// 1
+$theme1_content: #676767;
+$theme1_heading: #424141;
+$theme1_decoration: #fbc491;
+$theme1_canvas_background: #fff;
+
+// 2
+$theme2_text: #fff;
+$theme2_content: #c8c8c8;
+$theme2_heading: #fff;
+$theme2_decoration: #b9b9b9;
+$theme2_canvas_background: #090722;
+
+// 3
+$theme3_text: #000000;
+$theme3_content: #716f6f;
+$theme3_heading: #000000;
+$theme3_decoration: #ff6d6d;
+$theme3_label: #f85c5c;
+$theme3_canvas_background: #fff;
+
+// flex
+$app_flex_justify: start;
+$app_flex_align: start;
+$app_flex_direction: row;
+$app_flex_gap: 1rem;
+$app_flex_wrap: nowrap;

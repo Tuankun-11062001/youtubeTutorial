@@ -1,0 +1,15 @@
+.btn_download {
+  @include button(
+    $pad_inline: $app_padding + 2rem,
+    $background: $app_btn_background,
+    $color: $app_btn_text
+  );
+}
+
+.btn_theme {
+  @include button(
+    $pad_inline: $app_padding + 1rem,
+    $background: $app_btn_background,
+    $color: $app_btn_text
+  );
+}

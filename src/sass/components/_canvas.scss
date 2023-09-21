@@ -1,0 +1,231 @@
+.canvas {
+  width: 90%;
+  background: $theme1_canvas_background;
+  border-radius: 0 2rem 2rem 0;
+  box-shadow: $app_box_shadow;
+  position: relative;
+
+  @include md {
+    width: 65%;
+  }
+
+  @include lg {
+    width: 50%;
+  }
+
+  @include xl {
+    width: 30%;
+  }
+
+  &.theme2 {
+    background: $theme2_canvas_background;
+    color: $theme2_heading;
+    p {
+      color: $theme2_content;
+    }
+  }
+
+  &.theme3 {
+    background: $theme3_canvas_background;
+    color: $theme3_text;
+    p {
+      color: $theme3_content;
+    }
+  }
+
+  .content {
+    padding-block: 3rem;
+    margin-left: 4rem;
+    padding-inline: 3rem;
+    @include dynamicAlign(
+      $direction: column,
+      $gap: 3rem,
+      $justify: center,
+      $align: center
+    );
+    h1 {
+      font-size: 4rem;
+      font-weight: 400;
+      margin-bottom: $app_margin;
+
+      @include md {
+        font-size: 8rem;
+      }
+    }
+
+    .theme2_decoration_top {
+      @include dynamicAlign($justify: space-between);
+    }
+
+    .theme2_title {
+      letter-spacing: 0.7rem;
+    }
+    .theme2_col_content {
+      @include dynamicAlign($justify: start);
+      width: 100%;
+      .group_content {
+        flex: 1;
+      }
+    }
+
+    // theme3
+    .theme3_image_top {
+      width: 70%;
+      margin-top: -6rem;
+    }
+
+    @include md {
+      .theme3_image_top {
+        width: 100%;
+        margin-top: -6rem;
+      }
+    }
+  }
+
+  .group {
+    @include dynamicAlign($gap: 3rem);
+    width: 100%;
+    height: 20rem;
+
+    &.reverse {
+      @include dynamicAlign($direction: row-reverse);
+      .group_content {
+        padding-left: 2rem;
+      }
+    }
+
+    &_content {
+      flex: 1;
+      h3 {
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+
+      @include md {
+        h3 {
+          font-size: 2rem;
+        }
+        h3 {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    &_image {
+      display: block;
+      flex: 1;
+      max-height: inherit;
+
+      @include md {
+        max-height: 20rem;
+      }
+
+      &.theme1_alone {
+        width: 30rem;
+        div {
+          width: inherit;
+          height: 20rem;
+        }
+      }
+
+      &.theme2_alone {
+        width: 100%;
+      }
+
+      &.theme3_alone {
+        width: 100%;
+      }
+
+      .group_view {
+        border: 0.2rem dashed gray;
+        border-radius: $app_radius - 2rem;
+        // background: white;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
+        &.theme3 {
+          border: 0.2rem dashed $theme3_label;
+          color: $theme3_label;
+        }
+
+        @include md {
+        }
+
+        @include dynamicAlign(
+          $justify: center,
+          $align: center,
+          $direction: column,
+          $gap: 0.5rem
+        );
+        padding-block: 2rem;
+        div {
+          @include dynamicAlign(
+            $justify: center,
+            $align: center,
+            $direction: column,
+            $gap: 0.5rem
+          );
+          font-size: 1.6rem;
+          span {
+            color: $theme1_content;
+          }
+        }
+      }
+      &.rotate_right {
+        position: relative;
+        transform: rotate(10deg);
+      }
+      &.rotate_left {
+        position: relative;
+        transform: rotate(-10deg);
+      }
+    }
+  }
+
+  .theme_img {
+    position: absolute;
+    width: 30rem;
+    bottom: -5rem;
+    right: -2rem;
+  }
+
+  .theme2_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25rem;
+  }
+  .theme3_img {
+    position: absolute;
+    bottom: -4rem;
+    right: 0;
+    width: 20rem;
+  }
+
+  @include md {
+    .theme_img {
+      bottom: -5rem;
+      right: -15rem;
+      width: 50rem;
+    }
+    .theme2_img {
+      bottom: -10rem;
+      right: -15rem;
+      width: 40rem;
+    }
+    .theme3_img {
+      position: absolute;
+      bottom: -4rem;
+      right: 0;
+      width: 20rem;
+    }
+  }
+}
